@@ -23,9 +23,9 @@ class FinishActivity : AppCompatActivity() {
         val userName = intent.getStringExtra(Constant.USER_NAME)
         val totalQuestions = intent.getStringExtra(Constant.TOTAL_QUESTIONS)
         val correctAnswers = intent.getStringExtra(Constant.CORRECT_ANSWERS)
-
+        val score = "Your score is $correctAnswers of $totalQuestions"
         tvName?.text = userName
-        tvScore?.text = "Your score is $correctAnswers of $totalQuestions"
+        tvScore?.text = score
 
         btnFinish?.setOnClickListener {
             intent = Intent(this, MainActivity::class.java)
