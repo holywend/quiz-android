@@ -212,7 +212,7 @@ class QuizQuestionsActivity : AppCompatActivity() {
     }
 
     private fun setDisplay(index: Int) {
-        val currentProgress = "${index + 1}/${pbProgress?.max}"
+        val currentProgress = "${index + 1}/${questionList.size}"
         clearSelectedOption()
         tvProgress?.text = currentProgress
         tvQuestion?.text = questionList[index].question
